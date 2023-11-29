@@ -64,7 +64,7 @@ export default function KeepMountedModal() {
         aria-describedby="keep-mounted-modal-description"
         className="overflow-y-scroll"
       >
-        <Box sx={style(screenWidth < 500 ? screenWidth - 20 : 500)}>
+        <Box sx={style(screenWidth < 500 ? screenWidth + 10 : 500)}>
           <button
             className="absolute top-[2rem] right-[2rem] z-50"
             onClick={handleClose}
