@@ -21,7 +21,7 @@ const style = (width: number) => {
     // bgcolor: "white",
     // border: "2px solid #000",
     boxShadow: 24,
-    p: 4,
+    p: 0,
   };
 };
 
@@ -62,6 +62,7 @@ export default function KeepMountedModal() {
         onClose={handleClose}
         aria-labelledby="keep-mounted-modal-title"
         aria-describedby="keep-mounted-modal-description"
+        className="overflow-y-scroll"
       >
         <Box sx={style(screenWidth < 500 ? screenWidth - 20 : 500)}>
           <button
@@ -71,9 +72,23 @@ export default function KeepMountedModal() {
             <CloseIcon />
           </button>
 
-<iframe src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0" style={{border:"none",width:"100%",height:"100%", position:"absolute", left:0, bottom:0}} scrolling="yes" id="hFTwQPUJXI9obdqaYZT0" title="Aumento Pecho"></iframe>
-<script async src="https://link.msgsndr.com/js/form_embed.js"></script>
-
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0"
+            style={{
+              border: "none",
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              left: 0,
+              bottom: 0,
+            }}
+            id="hFTwQPUJXI9obdqaYZT0"
+            title="Aumento Pecho"
+          ></iframe>
+          <script
+            async
+            src="https://link.msgsndr.com/js/form_embed.js"
+          ></script>
         </Box>
       </Modal>
     </div>
