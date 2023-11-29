@@ -70,24 +70,10 @@ export default function KeepMountedModal() {
           >
             <CloseIcon />
           </button>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/survey/r5uGgpzcjkoptC55vMZn"
-            style={{
-              border: "none",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            // scrolling="no"
-            id="r5uGgpzcjkoptC55vMZn"
-            title="Aparato Digestivo"
-          ></iframe>
-          <script
-            async
-            src="https://link.msgsndr.com/js/form_embed.js"
-          ></script>
+
+<iframe src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0" style={{border:"none",width:"100%",height:"100%", position:"absolute", left:0, bottom:0}} id="hFTwQPUJXI9obdqaYZT0" title="Aumento Pecho"></iframe>
+<script async src="https://link.msgsndr.com/js/form_embed.js"></script>
+
         </Box>
       </Modal>
     </div>
