@@ -71,7 +71,7 @@ export default function KeepMountedModal() {
             <CloseIcon />
           </button>
 
-<iframe src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0" style={{border:"none",width:"100%",height:"100%", position:"absolute", left:0, bottom:0}} id="hFTwQPUJXI9obdqaYZT0" title="Aumento Pecho"></iframe>
+<iframe src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0" style={{border:"none",width:"100%",height:"100%", position:"absolute", left:0, bottom:0}} scrolling="yes" id="hFTwQPUJXI9obdqaYZT0" title="Aumento Pecho"></iframe>
 <script async src="https://link.msgsndr.com/js/form_embed.js"></script>
 
         </Box>
