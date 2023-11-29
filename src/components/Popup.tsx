@@ -80,7 +80,7 @@ export default function KeepMountedModal() {
               height: "100%",
               position: "absolute",
               left: 0,
-              bottom: 0,
+              bottom: "-40px",
             }}
             id="hFTwQPUJXI9obdqaYZT0"
             title="Aumento Pecho"
