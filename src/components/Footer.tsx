@@ -23,6 +23,7 @@ export default async function Footer() {
               height: "100%",
               backgroundColor: "transparent",
             }}
+            loading="lazy"
             // scrolling="no"
             id="r5uGgpzcjkoptC55vMZn"
             title="Aparato Digestivo"

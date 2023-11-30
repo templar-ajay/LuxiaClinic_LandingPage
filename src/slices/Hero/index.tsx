@@ -101,6 +101,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <section className="relative w-full">
       <PrismicNextImage
         className="absolute -z-20 w-full h-full object-cover"
+        loading="eager"
         field={slice.primary.background_image}
       />
       {backgroundOfSmallImagesUID && (

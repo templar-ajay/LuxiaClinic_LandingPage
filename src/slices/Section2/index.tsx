@@ -80,6 +80,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
       <PrismicNextImage
         className="absolute -z-20 w-full h-full object-cover"
         field={slice.primary.background_image}
+        loading="lazy"
       />
       {backgroundOfSmallImagesUID && (
         <BackgroundOfSmallImages uid={backgroundOfSmallImagesUID} />

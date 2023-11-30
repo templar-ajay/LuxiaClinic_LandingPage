@@ -100,6 +100,7 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
             <PrismicNextImage
               className="absolute -z-20 w-full h-full object-cover"
               field={background_image}
+              loading="lazy"
             />
             {
               // @ts-ignore

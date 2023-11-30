@@ -21,7 +21,10 @@ const BackgroundOfSmallImages = async ({ uid }: any) => {
             left: slice.primary.left + "px",
           }}
         >
-          <PrismicNextImage field={slice.primary.small_background_image} />
+          <PrismicNextImage
+            loading="eager"
+            field={slice.primary.small_background_image}
+          />
         </div>
       ))}
     </div>
