@@ -13,23 +13,19 @@ export default async function Footer() {
             field={background_image}
           />
           <iframe
-            src="https://api.leadconnectorhq.com/widget/survey/r5uGgpzcjkoptC55vMZn"
+            src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0"
             style={{
               border: "none",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "transparent",
             }}
+            id="hFTwQPUJXI9obdqaYZT0"
+            title="Aumento Pecho"
             loading="lazy"
-            // scrolling="no"
-            id="r5uGgpzcjkoptC55vMZn"
-            title="Aparato Digestivo"
+            scrolling="yes"
           ></iframe>
           <script
-            async
+            async={true}
             src="https://link.msgsndr.com/js/form_embed.js"
           ></script>
         </div>

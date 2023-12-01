@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Script from "next/script";
+import { Providers } from "./providers";
 
 const body = Nunito_Sans({
   subsets: ["latin"],
@@ -81,9 +82,11 @@ export default async function RootLayout({
             ></iframe>
           </noscript>
         )}
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>

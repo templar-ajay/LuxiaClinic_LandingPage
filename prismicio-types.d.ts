@@ -448,6 +448,146 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *Comparison → Primary*
+ */
+export interface ComparisonSliceDefaultPrimary {
+  /**
+   * Title field in *Comparison → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Title Color field in *Comparison → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
+   * CTA Text field in *Comparison → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Text Color field in *Comparison → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * After CTA Text field in *Comparison → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  after_cta_text: prismic.RichTextField;
+
+  /**
+   * Text Color field in *Comparison → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  text_color: prismic.ColorField;
+
+  /**
+   * Background Image field in *Comparison → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Background Of Small Images field in *Comparison → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField;
+}
+
+/**
+ * Primary content in *Comparison → Items*
+ */
+export interface ComparisonSliceDefaultItem {
+  /**
+   * Image 1 field in *Comparison → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.items[].image_1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_1: prismic.ImageField<never>;
+
+  /**
+   * Image 2 field in *Comparison → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.items[].image_2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Comparison Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ComparisonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ComparisonSliceDefaultPrimary>,
+  Simplify<ComparisonSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Comparison*
+ */
+type ComparisonSliceVariation = ComparisonSliceDefault;
+
+/**
+ * Comparison Shared Slice
+ *
+ * - **API ID**: `comparison`
+ * - **Description**: Comparison
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ComparisonSlice = prismic.SharedSlice<
+  "comparison",
+  ComparisonSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -1336,6 +1476,11 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      ComparisonSlice,
+      ComparisonSliceDefaultPrimary,
+      ComparisonSliceDefaultItem,
+      ComparisonSliceVariation,
+      ComparisonSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceDefaultItem,
