@@ -13,7 +13,7 @@ export default async function Button({
   return (
     <div className="relative">
       <CTA
-        className=""
+        className={className}
         style={{
           color: cta_text_color || "rgb(250,255,255)",
           backgroundColor: cta_background_color || "rgb(234,179,8)",
