@@ -712,6 +712,16 @@ export interface HeroSliceDefaultPrimary {
   background_image: prismic.ImageField<never>;
 
   /**
+   * Background Image For Mobile Devices field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.background_image_for_mobile_devices
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image_for_mobile_devices: prismic.ImageField<never>;
+
+  /**
    * Transition Image field in *Hero → Primary*
    *
    * - **Field Type**: Image

@@ -104,6 +104,12 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         loading="eager"
         field={slice.primary.background_image}
       />
+      <PrismicNextImage
+        className="absolute -z-20 w-full h-full object-cover visible mobile:hidden"
+        loading="eager"
+        field={slice.primary.background_image_for_mobile_devices}
+      />
+
       {backgroundOfSmallImagesUID && (
         <BackgroundOfSmallImages uid={backgroundOfSmallImagesUID} />
       )}
@@ -148,7 +154,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
           <div className="image-div">
             <PrismicNextImage field={slice.primary.image} className="py-4" />
-            {/* popup video will have to wait */}
           </div>
           <div className="cta-div mx-auto max-w-xl ">
             {slice.primary.cta_text?.length && (

@@ -110,6 +110,14 @@
             "thumbnails": []
           }
         },
+        "background_image_for_mobile_devices": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image For Mobile Devices",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "transition_image": {
           "type": "Image",
           "config": {
