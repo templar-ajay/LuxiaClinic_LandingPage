@@ -151,9 +151,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             {/* popup video will have to wait */}
           </div>
           <div className="cta-div mx-auto max-w-xl ">
-            <Button field={slice.primary.cta_link}>
-              {slice.primary.cta_text}
-            </Button>
+            {slice.primary.cta_text?.length && (
+              <Button field={slice.primary.cta_link}>
+                {slice.primary.cta_text}
+              </Button>
+            )}
             <AfterCtaText
               field={slice.primary.after_cta_text}
               color={slice.primary.sub_header_color}

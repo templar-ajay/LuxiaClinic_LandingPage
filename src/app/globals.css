@@ -25,7 +25,11 @@ ul>li::before {
     margin-right: 0.5em;
     padding: 0.5px 4px;
     padding-top: 2.25px;
-    background-color: green;
+    background-color: #CD7BA1;
     border-radius: 50px;
     color: white;
+}
+
+strong {
+    color: #CD7BA1;
 }

@@ -28,13 +28,6 @@
 				},
 				"__TYPE__": "EmbedContent"
 			},
-			"cta_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
 			"header": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
@@ -96,11 +89,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"cta_text": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "CLAIM YOUR FREE SESSION NOW"
 			},
 			"background_image": {
 				"url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxmcnVpdHxlbnwwfHx8fDE3MDAzOTI0NzJ8MA&ixlib=rb-4.0.3&q=85",
