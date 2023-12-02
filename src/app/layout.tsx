@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import Script from "next/script";
 import { Providers } from "./providers";
+import { TrackingHeadScript } from "@phntms/next-gtm";
 
 const body = Nunito_Sans({
   subsets: ["latin"],
@@ -61,28 +62,9 @@ export default async function RootLayout({
   } = settings;
   return (
     <html lang="en">
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`} />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', '${GTM_ID}');
-        `}
-      </Script>
       <body className={clsx(body.variable, display.variable)}>
-        {GTM_ID?.length && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            ></iframe>
-          </noscript>
-        )}
         <Providers>
+          <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
           <Header />
           {children}
           <Footer />
