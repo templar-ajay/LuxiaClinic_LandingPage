@@ -34,7 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
 
   const settings = await client.getSingle("settings");
-  // console.log("settings page data", settings);
 
   const {
     data: { meta_title, meta_description, og_image },
