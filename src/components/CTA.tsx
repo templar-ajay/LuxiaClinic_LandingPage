@@ -32,7 +32,7 @@ export default function CTA({
         <ModalContent style={{ height: "700px", overflowY: "scroll" }}>
           {(onClose) => (
             <>
-              <ModalBody>
+              <ModalBody style={{ paddingRight: 0, paddingLeft: 0 }}>
                 <iframe
                   src="https://api.leadconnectorhq.com/widget/survey/hFTwQPUJXI9obdqaYZT0"
                   style={{
