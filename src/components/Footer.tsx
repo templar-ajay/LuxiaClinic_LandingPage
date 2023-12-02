@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
-export default async function Footer({ showIframe }) {
+export default async function Footer({ showIframe }: any) {
   const client = createClient();
   const footerData = await client.getSingle("footer");
   const settings = await client.getSingle("settings");
@@ -10,6 +10,7 @@ export default async function Footer({ showIframe }) {
     background_image,
     footer_link,
     footer_link_text,
+    footer_link_text_color,
     whatsapp_icon_link,
     whatsapp_icon_color,
     whatsapp_icon_background_color,
@@ -54,7 +55,10 @@ export default async function Footer({ showIframe }) {
           <div className="block w-fit mx-auto">
             <PrismicNextLink
               className="text-center block text-white"
-              style={{ paddingTop: showIframe ? "0" : "40px" }}
+              style={{
+                paddingTop: showIframe ? "0" : "40px",
+                color: footer_link_text_color || "#fff",
+              }}
               field={footer_link}
             >
               {footer_link_text}
