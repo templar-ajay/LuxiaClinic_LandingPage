@@ -74,6 +74,50 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   footer_link_text: prismic.KeyTextField;
+
+  /**
+   * Footer Link Text Color field in *Footer*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_link_text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  footer_link_text_color: prismic.ColorField;
+
+  /**
+   * Whatsapp Icon Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.whatsapp_icon_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  whatsapp_icon_link: prismic.LinkField;
+
+  /**
+   * Whatsapp Icon Color field in *Footer*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.whatsapp_icon_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  whatsapp_icon_color: prismic.ColorField;
+
+  /**
+   * Whatsapp Icon Background Color field in *Footer*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.whatsapp_icon_background_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  whatsapp_icon_background_color: prismic.ColorField;
 }
 
 /**

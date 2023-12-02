@@ -29,6 +29,35 @@
           "label": "Footer Link Text",
           "placeholder": ""
         }
+      },
+      "footer_link_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "Footer Link Text Color",
+          "placeholder": ""
+        }
+      },
+      "whatsapp_icon_link": {
+        "type": "Link",
+        "config": {
+          "label": "Whatsapp Icon Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "whatsapp_icon_color": {
+        "type": "Color",
+        "config": {
+          "label": "Whatsapp Icon Color",
+          "placeholder": ""
+        }
+      },
+      "whatsapp_icon_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Whatsapp Icon Background Color",
+          "placeholder": ""
+        }
       }
     }
   }
