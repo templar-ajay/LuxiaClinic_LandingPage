@@ -1,5 +1,5 @@
 import type { Metadata, ResolvingMetadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import clsx from "clsx";
 
 import { Nunito, Nunito_Sans } from "next/font/google";
