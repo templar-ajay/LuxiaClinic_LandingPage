@@ -9,8 +9,7 @@ import { PrismicPreview } from "@prismicio/next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Head from "next/head";
-import Script from "next/script";
+
 import { Providers } from "@/app/providers";
 import { TrackingHeadScript } from "@phntms/next-gtm";
 
