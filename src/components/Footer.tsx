@@ -1,9 +1,9 @@
 import { createClient } from "@/prismicio";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 export default async function Footer() {
   const client = createClient();
   const settings = await client.getSingle("footer");
-  const { background_image } = settings.data;
+  const { background_image, footer_link, footer_link_text } = settings.data;
   return (
     <>
       <footer>
@@ -28,6 +28,8 @@ export default async function Footer() {
             async={true}
             src="https://link.msgsndr.com/js/form_embed.js"
           ></script>
+
+          <PrismicNextLink field={footer_link}></PrismicNextLink>
         </div>
       </footer>
     </>

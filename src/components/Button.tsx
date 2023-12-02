@@ -3,10 +3,7 @@ import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
 import { createClient } from "@/prismicio";
 import CTA from "@/components/CTA";
 
-export default async function Button({
-  className,
-  ...restProps
-}: PrismicNextLinkProps) {
+export default async function Button({ className, children }: any) {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const { cta_background_color, cta_text_color } = settings.data;
@@ -18,8 +15,9 @@ export default async function Button({
           color: cta_text_color || "rgb(250,255,255)",
           backgroundColor: cta_background_color || "rgb(234,179,8)",
         }}
-        {...restProps}
-      />
+      >
+        {children}
+      </CTA>
 
       {/* <PrismicNextLink
         className={clsx(

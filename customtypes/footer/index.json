@@ -13,6 +13,22 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "footer_link": {
+        "type": "Link",
+        "config": {
+          "label": "Footer Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "footer_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Link Text",
+          "placeholder": ""
+        }
       }
     }
   }

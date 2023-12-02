@@ -147,7 +147,7 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
                     </div>
                     {cta_text?.length && (
                       <div className="cta-div">
-                        <Button field={cta_link}>{cta_text}</Button>
+                        <Button>{cta_text}</Button>
                       </div>
                     )}
 

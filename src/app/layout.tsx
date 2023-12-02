@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 
 import { Providers } from "@/app/providers";
 import { TrackingHeadScript } from "@phntms/next-gtm";
+import Head from "next/head";
 
 const body = Nunito_Sans({
   subsets: ["latin"],
@@ -60,6 +61,12 @@ export default async function RootLayout({
   } = settings;
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </Head>
       <body className={clsx(body.variable, display.variable)}>
         <Providers>
           <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
