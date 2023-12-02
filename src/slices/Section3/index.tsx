@@ -116,7 +116,9 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
             >
               <div
                 className={clsx(
-                  keep_image_right == true ? " " : "flex-row-reverse ",
+                  keep_image_right == true || keep_image_right == null
+                    ? " "
+                    : "flex-row-reverse",
                   "flex flex-wrap-reverse gap-y-8"
                 )}
               >
