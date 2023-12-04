@@ -14,34 +14,55 @@
           "thumbnails": []
         }
       },
-      "footer_link": {
-        "type": "Link",
+      "terms_and_conditions_text": {
+        "type": "StructuredText",
         "config": {
-          "label": "Footer Link",
+          "label": "Terms and Conditions Text",
           "placeholder": "",
           "allowTargetBlank": true,
+          "single": "paragraph,strong,em,hyperlink"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "thumbnails": [],
+          "constraint": {
+            "height": 80,
+            "width": null
+          },
+          "label": "Logo"
+        }
+      },
+      "company_name": {
+        "type": "Text",
+        "config": {
+          "label": "Company Name",
+          "placeholder": ""
+        }
+      },
+      "privacy_policy_link": {
+        "type": "Link",
+        "config": {
+          "label": "Privacy Policy Link",
+          "placeholder": "",
           "select": null
         }
       },
-      "footer_link_text": {
-        "type": "Text",
-        "config": {
-          "label": "Footer Link Text",
-          "placeholder": ""
-        }
-      },
-      "footer_link_text_color": {
-        "type": "Color",
-        "config": {
-          "label": "Footer Link Text Color",
-          "placeholder": ""
-        }
-      },
-      "whatsapp_icon_link": {
+      "terms_and_conditions_link": {
         "type": "Link",
         "config": {
-          "label": "Whatsapp Icon Link",
+          "label": "Terms and Conditions Link",
           "placeholder": "",
+          "select": null
+        }
+      },
+      "whatsapp_link": {
+        "type": "Link",
+        "config": {
+          "label": "Whatsapp Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
           "select": null
         }
       },
@@ -56,6 +77,22 @@
         "type": "Color",
         "config": {
           "label": "Whatsapp Icon Background Color",
+          "placeholder": ""
+        }
+      },
+      "medical_marketing_website_link": {
+        "type": "Link",
+        "config": {
+          "label": "Medical Marketing Website Link",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "medical_marketing_website_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Medical Marketing Website Link Text",
           "placeholder": ""
         }
       }

@@ -54,48 +54,70 @@ interface FooterDocumentData {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Footer Link field in *Footer*
+   * Terms and Conditions Text field in *Footer*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.footer_link
+   * - **API ID Path**: footer.terms_and_conditions_text
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  footer_link: prismic.LinkField;
+  terms_and_conditions_text: prismic.RichTextField;
 
   /**
-   * Footer Link Text field in *Footer*
+   * Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Company Name field in *Footer*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.footer_link_text
+   * - **API ID Path**: footer.company_name
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  footer_link_text: prismic.KeyTextField;
+  company_name: prismic.KeyTextField;
 
   /**
-   * Footer Link Text Color field in *Footer*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.footer_link_text_color
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#color
-   */
-  footer_link_text_color: prismic.ColorField;
-
-  /**
-   * Whatsapp Icon Link field in *Footer*
+   * Privacy Policy Link field in *Footer*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.whatsapp_icon_link
+   * - **API ID Path**: footer.privacy_policy_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  whatsapp_icon_link: prismic.LinkField;
+  privacy_policy_link: prismic.LinkField;
+
+  /**
+   * Terms and Conditions Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.terms_and_conditions_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  terms_and_conditions_link: prismic.LinkField;
+
+  /**
+   * Whatsapp Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.whatsapp_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  whatsapp_link: prismic.LinkField;
 
   /**
    * Whatsapp Icon Color field in *Footer*
@@ -118,6 +140,28 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   whatsapp_icon_background_color: prismic.ColorField;
+
+  /**
+   * Medical Marketing Website Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.medical_marketing_website_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  medical_marketing_website_link: prismic.LinkField;
+
+  /**
+   * Medical Marketing Website Link Text field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.medical_marketing_website_link_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  medical_marketing_website_link_text: prismic.KeyTextField;
 }
 
 /**
