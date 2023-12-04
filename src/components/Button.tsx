@@ -1,5 +1,3 @@
-import clsx from "clsx";
-import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
 import { createClient } from "@/prismicio";
 import CTA from "@/components/CTA";
 
