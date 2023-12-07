@@ -70,6 +70,14 @@
           "label": "GTM_ID",
           "placeholder": ""
         }
+      },
+      "default_iframe": {
+        "type": "Link",
+        "config": {
+          "label": "default iFrame",
+          "select": "document",
+          "customtypes": ["iframe"]
+        }
       }
     }
   }

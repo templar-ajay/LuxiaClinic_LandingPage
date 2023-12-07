@@ -359,6 +359,34 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Content for iFrame documents
+ */
+interface IframeDocumentData {
+  /**
+   * CTA iFrame field in *iFrame*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: iframe.cta_iframe
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_iframe: prismic.KeyTextField;
+}
+
+/**
+ * iFrame document from Prismic
+ *
+ * - **API ID**: `iframe`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IframeDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
+
 type LandingPageDocumentDataSlicesSlice =
   | Section2Slice
   | Section3Slice
@@ -531,6 +559,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   gtm_id: prismic.KeyTextField;
+
+  /**
+   * default iFrame field in *Settings*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.default_iframe
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  default_iframe: prismic.ContentRelationshipField<"iframe">;
 }
 
 /**
@@ -554,6 +593,7 @@ export type AllDocumentTypes =
   | FooterDocument
   | HeaderDocument
   | HomepageDocument
+  | IframeDocument
   | LandingPageDocument
   | SettingsDocument;
 
@@ -600,6 +640,16 @@ export interface ComparisonSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   cta_text_color: prismic.ColorField;
+
+  /**
+   * iFrame field in *Comparison → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  iframe: prismic.ContentRelationshipField<"iframe">;
 
   /**
    * After CTA Text field in *Comparison → Primary*
@@ -790,6 +840,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
+
+  /**
+   * iFrame field in *Hero → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  iframe: prismic.ContentRelationshipField<"iframe">;
 
   /**
    * After CTA Text field in *Hero → Primary*
@@ -1069,6 +1129,16 @@ export interface Section1SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * iFrame field in *Section1 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  iframe: prismic.ContentRelationshipField<"iframe">;
+
+  /**
    * After CTA Text field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1182,6 +1252,16 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
+
+  /**
+   * iFrame field in *Section2 → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  iframe: prismic.ContentRelationshipField<"iframe">;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1362,6 +1442,16 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
+
+  /**
+   * iFrame field in *Section3 → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].iframe
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  iframe: prismic.ContentRelationshipField<"iframe">;
 
   /**
    * After CTA Text field in *Section3 → Items*
@@ -1550,6 +1640,8 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      IframeDocument,
+      IframeDocumentData,
       LandingPageDocument,
       LandingPageDocumentData,
       LandingPageDocumentDataSlicesSlice,
